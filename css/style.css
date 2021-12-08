@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dad3f8;
+}
+
+.container {
+    max-width: 60rem;
+    width: 100%;
+    margin: 0 1.4rem;
+    background: #fff;
+    padding: 2.5rem 3.125rem 2.5rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+header {
+    font-size: 1.875rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+input {
+    display: none;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 2;
+    width: 20%;
+    margin-right: 3rem;
+}
+
+.list label {
+    height: 3.75rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: .3rem 0;
+    border-radius: .5rem;
+    line-height: 3.75rem;
+    padding-left: 1rem;
+    transition: .3s;
+}
+
+.list label:hover {
+    color: rgb(87, 16, 153);
+}
+
+#home:checked ~ .content > .list > .home {
+    background: rgb(104, 26, 177);
+    color: white;
+}
+
+#blog:checked ~ .content > .list > .blog {
+    background: rgb(104, 26, 177);
+    color: white;
+}
+
+#help:checked ~ .content > .list > .help {
+    background: rgb(104, 26, 177);
+    color: white;
+}
+
+#code:checked ~ .content > .list > .code {
+    background: rgb(104, 26, 177);
+    color: white;
+}
+
+#about:checked ~ .content > .list > .about {
+    background: rgb(104, 26, 177);
+    color: white;
+}
+
+.text-block {
+    width: 80%;
+    height: 100%;
+}
+
+.text-block h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.text-block p {
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.text-block .text {
+    display: none;
+}
+
+#home:checked ~ .content > .text-block > .home {
+    display: block;
+}
+
+#blog:checked ~ .content > .text-block > .blog {
+    display: block;
+}
+
+#help:checked ~ .content > .text-block > .help {
+   display: block;
+}
+
+#code:checked ~ .content > .text-block > .code {
+   display: block;
+}
+
+#about:checked ~ .content > .text-block > .about {
+    display: block;
+}
+
+
+/* Responsive on 730px */
+
+@media (max-width: 730px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .content .list {
+        margin-bottom: 2rem;
+        max-width: 14rem;
+        width: 100%;
+    }
+
+    .text-block {
+        width: 100%;
+    }
+}
